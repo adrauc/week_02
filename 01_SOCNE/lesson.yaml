@@ -317,8 +317,29 @@
 - Class: text
   Output: I was using "taiwan OR 臺灣" as search query to collect the tweets. The majority of tweets are written in English.
 
+- Class: cmd_question
+  Output: Let's focus on one last column - created_at. Check the max value in this column with max() and $ subset.
+  CorrectAnswer: max(tweets$created_at)
+  AnswerTests: omnitest(correctExpr='max(tweets$created_at)')
+  Hint: Just type max(tweets$created_at). 
+
+- Class: cmd_question
+  Output: That is the newest tweet. Check the min value in this column with min() and $ subset.
+  CorrectAnswer: min(tweets$created_at)
+  AnswerTests: omnitest(correctExpr='min(tweets$created_at)')
+  Hint: Just type min(tweets$created_at). 
+
+- Class: cmd_question
+  Output: Now use both functions together and subtract the min value from the max value with min() and max().
+  CorrectAnswer: max(tweets$created_at) - min(tweets$created_at)
+  AnswerTests: omnitest(correctExpr='max(tweets$created_at) - min(tweets$created_at)')
+  Hint: Just type max(tweets$created_at) - min(tweets$created_at). 
+
 - Class: text
-  Output: Next week you will download your own tweets - stay tuned!
+  Output: With 5000 tweets I can cover 4 hours with my search terms.
+
+- Class: text
+  Output: That's it! Next week you will download your own tweets - stay tuned!
    
 
   
