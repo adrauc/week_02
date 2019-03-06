@@ -170,9 +170,9 @@
   Output: However, since we've already solved that problem, let's solve a different problem by assigning names to the columns of our data frame so that we know what type of measurement each column represents.
 
 - Class: cmd_question
-  Output: Since we have six columns (including user scree_names), we'll need to first create a vector containing one element for each column. Create a character vector called cnames that contains the following values (in order) -- "screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count".
-  CorrectAnswer: cnames <- c("screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count")
-  AnswerTests: omnitest(correctExpr='cnames <- c("screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count")')
+  Output: Since we have six columns (including user scree_names), we'll need to first create a vector containing one element for each column. Create a character vector called cnames that contains the following values (in order) -- "screen_name", "followers_count", "friends_count", "statuses_count", "favorites_count", "listed_count".
+  CorrectAnswer: cnames <- c("screen_name", "followers_count", "friends_count", "statuses_count", "favorites_count", "listed_count")
+  AnswerTests: omnitest(correctExpr='cnames <- c("screen_name", "followers_count", "friends_count", "statuses_count", "favorites_count", "listed_count")')
   Hint: Make sure all of the names are lowercase, surrounded by double quotes, and separated with commas. Don't forget to use the c() function.
 
 - Class: cmd_question
@@ -228,7 +228,7 @@
   Output: As you can see - we get back a tibble with just one column and not a vector. Box brackets with index numbers always return a tibble! The same happens if you use tweets[ ,"user_id"].
 
 - Class: cmd_question
-  Output: However, we can still subest a colum as vector if we use the $ subset (mydf$name_of_column). Try to call the first colum user_id of the tibble tweets with the $.
+  Output: However, we can still subest a column as vector if we use the $ subset (mydf$name_of_column). Try to call the first colum user_id of the tibble tweets with the $.
   CorrectAnswer: tweets$user_id
   AnswerTests: omnitest(correctExpr='tweets$user_id')
   Hint: Just type tweets$user_id. 
@@ -263,13 +263,13 @@
   Output: is.na() yields a vector of logical values the same length as reply, with TRUEs corresponding to NA values in replies and FALSEs corresponding to non-NA values in reply.
 
 - Class: text
-  Output: Let's start by indexing with logical vectors. One common scenario when working with real-world data is that we want to extract all elements of a vector that are NA. Recall that is.na(x) yields a vector of logical values the same length as reply, with TRUEs corresponding to NA values in reply and FALSEs corresponding to non-NA values in reply.
+  Output: Let's start by indexing with logical vectors. One common scenario when working with real-world data is that we want to extract all elements of a vector that are NA. Recall that is.na(reply) yields a vector of logical values the same length as reply, with TRUEs corresponding to NA values in reply and FALSEs corresponding to non-NA values in reply.
 
 - Class: mult_question
   Output: What do you think reply[is.na(reply)] will give you?
-  AnswerChoices: A vector of all NAs (ids of replied tweets); A vector with no NAs (ids of replied tweets); A vector with all NAs (no ids of replied tweets); A vector of TRUEs and FALSEs; A vector of length 0
-  CorrectAnswer: A vector with all NAs (no ids of replied tweets)
-  AnswerTests: omnitest(correctVal="A vector with all NAs (no ids of replied tweets)")
+  AnswerChoices: A vector of all NAs (ids of replied tweets); A vector with no NAs (ids of replied tweets); A vector of all NAs (no ids of replied tweets); A vector of TRUEs and FALSEs; A vector of length 0
+  CorrectAnswer: A vector of all NAs (no ids of replied tweets)
+  AnswerTests: omnitest(correctVal="A vector of all NAs (no ids of replied tweets)")
   Hint: Remember that is.na(replies) tells us where the NAs are in a vector. NA means here no reply - thus no ids. So if we subset x based on that, what do you expect to happen?
 
 - Class: cmd_question
@@ -279,7 +279,7 @@
   Hint: Type reply[is.na(reply)] to see that you get all NAs.
 
 - Class: cmd_question
-  Output: The operator `!` gives us the negation of a logical expression, so !is.na(x) can be read as `is not NA`. Therefore, if we want to create a vector called y that contains all of the non-NA values from reply, reply[!is.na(reply)]. Give it a try.
+  Output: The operator `!` gives us the negation of a logical expression, so !is.na(x) can be read as `is not NA`. Type reply[!is.na(reply)]. Give it a try.
   CorrectAnswer: reply[!is.na(reply)]
   AnswerTests: omnitest(correctExpr='reply[!is.na(reply)]')
   Hint: Type reply[!is.na(reply)] to capture all non-missing values from reply.
@@ -300,7 +300,7 @@
   Hint: Type str(tweets$is_retweet).
 
 - Class: cmd_question
-  Output: We have the data class logical. TRUE means obviously "is retweet". Try to directly subset all retweets with this column. Use tweets$is_retweet inside of the [] to select the retweets in the dataset/
+  Output: We have the data class logical. TRUE means obviously "is retweet". Try to directly subset all retweets with this column. Use tweets$is_retweet inside of the [] to select the retweets in the dataset.
   CorrectAnswer: tweets[tweets$is_retweet, ]
   AnswerTests: omnitest(correctExpr='tweets[tweets$is_retweet, ]')
   Hint: Type tweets[tweets$is_retweet, ].
@@ -316,11 +316,10 @@
   
 - Class: text
   Output: I was using "taiwan OR 臺灣" as search query to collect the tweets. The majority of tweets are written in English.
-  
-- Class: cmd_question
-  Output: Almost finished for today - let`s try the table function with the column lang. Subset the column lang of the tweets object and use it as argument inside of table()
-  CorrectAnswer: table(tweets$lang)
-  AnswerTests: omnitest(correctExpr='table(tweets$lang)')
-  Hint: Just type table(tweets$lang). 
+
+- Class: text
+  Output: Next week you will download your own tweets - stay tuned!
+   
+
   
 
