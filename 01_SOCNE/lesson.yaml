@@ -9,21 +9,6 @@
 
 - Class: text
   Output: Dear Taida students, welcome to my R and RStudio introduction course. Whenever you see three points below (e.g. `...`) then press the Enter-key to continue the lesson. Now press the Enter-key to continue.
-  
-- Class: cmd_question
-  Output: In its simplest form, R can be used as an interactive calculator. Type 1 + 4 into the console and then press Enter
-  CorrectAnswer: 1 + 4
-  AnswerTests: omnitest(correctExpr='1 + 4', correctVal=5)
-  Hint: just type 1 + 4 in the console
-
-- Class: cmd_question
-  Output: To assign the result of 1 + 4 to a new variable called x, you type x <-
-    1 + 4. This can be read as 'x gets 1 plus 4'. Give it a try now.
-  CorrectAnswer: x <- 1 + 4
-  AnswerTests: any_of_exprs('x <- 1 + 4', 'x <- 4 + 1')
-  Hint: Type x <- 1 + 4. It's important to include a single space on each side of
-    the assignment operator, but do NOT put a space between the `<` and the `-` that
-    form the arrow.  
 
 - Class: text
   Output: In this lesson, we`ll cover matrices and data frames. Both represent `rectangular` data types, meaning that they are used to store tabular data, with rows and columns.  
