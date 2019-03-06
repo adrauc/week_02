@@ -9,4 +9,4 @@
   )
 }
 
-load(file.path(.get_course_path(), "week_02", "SOCNE_01", "tweets.rdata"))
+load(file.path(.get_course_path(), "week_02", "01_SOCNE", "tweets.rdata"))
