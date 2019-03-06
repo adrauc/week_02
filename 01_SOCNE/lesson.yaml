@@ -192,7 +192,7 @@
   Output: We will now work with real data collected over the Twitter API with the rtweet package. You should see in the environment the objects tweets with 4675 obs.
 
 - Class: cmd_question
-  Output: You can check the number of rows with nrow(). Try it wit tweets!
+  Output: You can check the number of rows with nrow(). Try it with tweets!
   CorrectAnswer: nrow(tweets)
   AnswerTests: omnitest(correctExpr='nrow(tweets)')
   Hint: Just use the function nrow and add tweets as argument.
