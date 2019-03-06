@@ -14,14 +14,11 @@
   Output: In this lesson, we`ll cover matrices and data frames. Both represent `rectangular` data types, meaning that they are used to store tabular data, with rows and columns.  
 
 - Class: text
-  Output: In social science rows are usually cases (e.g. respondents in a survey, tweets, users etc.). Columns are variables - representing characteristics or answer.
+  Output: In social science rows are usually cases (e.g. respondents in a survey, tweets, users etc.). Columns are variables - representing characteristics or answers.
 
 - Class: text
-  Output: The main difference, as you'll see, is that matrices can only contain a single class of data, while data frames can consist of many different classes os data.
+  Output: The main difference, as you'll see, is that matrices can only contain a single class of data, while data frames can consist of many different classes of data.
   
-- Class: text
-  Output: The main difference, as you'll see, is that matrices can only contain a single class of data, while data frames can consist of many different classes data.  
-
 - Class: cmd_question
   Output: Let's create a vector containing the numbers 1 through 20 using the `:` operator. Store the result in a variable called my_vector.
   CorrectAnswer: my_vector <- 1:20
@@ -35,7 +32,7 @@
   Hint: Type my_vector to view its contents.
 
 - Class: cmd_question
-  Output: You can always check the structure of an object using the str() function. Try that now.
+  Output: You can always check the structure of an object using the str() function. Try that now with my_vector.
   CorrectAnswer: str(my_vector)
   AnswerTests: omnitest(correctExpr='str(my_vector)')
   Hint: Type str(my_vector).
@@ -173,13 +170,13 @@
   Output: However, since we've already solved that problem, let's solve a different problem by assigning names to the columns of our data frame so that we know what type of measurement each column represents.
 
 - Class: cmd_question
-  Output: Since we have six columns (including user scree_names), we'll need to first create a vector containing one element for each column. Create a character vector called cnames that contains the following values (in order) -- "screen_name", "age", "weight", "bp", "rating", "test".
-  CorrectAnswer: cnames <- c("patient", "age", "weight", "bp", "rating", "test")
-  AnswerTests: omnitest(correctExpr='cnames <- c("patient", "age", "weight", "bp", "rating", "test")')
+  Output: Since we have six columns (including user scree_names), we'll need to first create a vector containing one element for each column. Create a character vector called cnames that contains the following values (in order) -- "screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count".
+  CorrectAnswer: cnames <- c("screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count")
+  AnswerTests: omnitest(correctExpr='cnames <- c("screen_name", "followers_count", "freinds_count", "statuses_count", "favorites_count", "listed_count")')
   Hint: Make sure all of the names are lowercase, surrounded by double quotes, and separated with commas. Don't forget to use the c() function.
 
 - Class: cmd_question
-  Output: Now, use the colnames() function to set the `colnames` attribute for our data frame. This is similar to the way we used the dim() function earlier in this lesson.
+  Output: Now, use the colnames() function to set the `colnames` attribute for our data frame. This is similar to the way we used the dim() function earlier in this lesson. Use colnames() with my_data as argument and after the function add <- cnames
   CorrectAnswer: colnames(my_data) <- cnames
   AnswerTests: omnitest(correctExpr='colnames(my_data) <- cnames')
   Hint: Try colnames(my_data) <- cnames.
@@ -197,13 +194,13 @@
 - Class: cmd_question
   Output: You can check the number of rows with nrow(). Try it wit tweets!
   CorrectAnswer: nrow(tweets)
-  AnswerTests: omnitest(correctExpr='nrow(tweets')
+  AnswerTests: omnitest(correctExpr='nrow(tweets)')
   Hint: Just use the function nrow and add tweets as argument.
 
 - Class: cmd_question
   Output: Now check what class the object has with the function class.
   CorrectAnswer: class(tweets)
-  AnswerTests: omnitest(correctExpr='class(tweets')
+  AnswerTests: omnitest(correctExpr='class(tweets)')
   Hint: Just use the function nrow and add tweets as argument.
 
 - Class: text
