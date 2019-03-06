@@ -80,7 +80,7 @@
   Hint: Type my_vector to view its contents.
 
 - Class: cmd_question
-  Output: Now, lets confirm it's actually a matrix by using the class() function. Type class(my_vector) to see what I mean.
+  Output: Now, let`s confirm it's actually a matrix by using the class() function. Type class(my_vector) to see what I mean.
   CorrectAnswer: class(my_vector)
   AnswerTests: omnitest(correctExpr='class(my_vector)')
   Hint: Type class(my_vector) to view the class of my_vector.
@@ -219,7 +219,7 @@
   Output: You will always get only the first ten rows returned in the console with a nice summary.
 
 - Class: cmd_question
-  Output: Lets test subsetting. Use the box brackets [] to subset the first column which has the index number 1. Remember - [row,column]. Try to just call the first column
+  Output: Let`s test subsetting. Use the box brackets [] to subset the first column which has the index number 1. Remember - [row,column]. Try to just call the first column
   CorrectAnswer: tweets[ ,1]
   AnswerTests: omnitest(correctExpr='tweets[ ,1]')
   Hint: type tweets[ ,1]. Left we keep empty as we want all "rows" of column 1.  
@@ -237,7 +237,7 @@
   Output: Now we get a vector as you can see. With a data frame (not tibble) both approaches would have returned a vector - with tibbles only the $ subset works.
 
 - Class: cmd_question
-  Output: Lets check a preview of the data above in the source code window. Type View(tweets)
+  Output: Let`s check a preview of the data above in the source code window. Type View(tweets)
   CorrectAnswer: View(tweets)
   AnswerTests: omnitest(correctExpr='View(tweets)')
   Hint: Just type tweets$user_id. 
@@ -249,13 +249,13 @@
   Hint: Just type reply <- tweets$reply_to_status_id. 
 
 - Class: cmd_question
-  Output: NA value means no value available. All NA are not replies. If there is value it is a reply to a specific tweets. Lets check the first 20 values of reply with 1:20 and []
+  Output: NA value means no value available. All NA are not replies. If there is value it is a reply to a specific tweets. Let`s check the first 20 values of reply with 1:20 and []
   CorrectAnswer: View(reply[1:20])
   AnswerTests: omnitest(correctExpr='reply[1:20]')
   Hint: Use the reply object together with the subset [1:20]. 
 
 - Class: cmd_question
-  Output: Very few replies in our dataset - but at least one among the first 20 tweets. Lets use the is.na() function together with reply as argument. 
+  Output: Very few replies in our dataset - but at least one among the first 20 tweets. Let`s use the is.na() function together with reply as argument. 
   CorrectAnswer: is.na(reply)
   AnswerTests: omnitest(correctExpr='is.na(reply)')
   Hint: Just type is.na(reply). 
@@ -285,7 +285,7 @@
   Hint: Type reply[!is.na(reply)] to capture all non-missing values from reply.
 
 - Class: cmd_question
-  Output: Lets subset now directly all replies. We now directly call the colum with tweets$reply_to_status_id. We use !is.na(tweets$reply_to_status_id) and put it as subset for the rows. Type tweets[!is.na(tweets$reply_to_status_id), ]
+  Output: Let`s subset now directly all replies. We now directly call the colum with tweets$reply_to_status_id. We use !is.na(tweets$reply_to_status_id) and put it as subset for the rows. Type tweets[!is.na(tweets$reply_to_status_id), ]
   CorrectAnswer: tweets[!is.na(tweets$reply_to_status_id), ]
   AnswerTests: omnitest(correctExpr='tweets[!is.na(tweets$reply_to_status_id), ]')
   Hint: Type tweets[!is.na(tweets$reply_to_status_id), ].
@@ -294,7 +294,7 @@
   Output: As you can see, we now have selected only replies (see the relevant columns in the console).
 
 - Class: cmd_question
-  Output: Lets try the is_retweet column. Lets check with str(tweets$is_retweet) what kind of data this column has.
+  Output: Let`s try the is_retweet column. Let`s check with str(tweets$is_retweet) what kind of data this column has.
   CorrectAnswer: str(tweets$is_retweet)
   AnswerTests: omnitest(correctExpr='str(tweets$is_retweet)')
   Hint: Type str(tweets$is_retweet).
@@ -309,7 +309,7 @@
   Output: You can always save your subsets in a new object with name_new_object <- ...
 
 - Class: cmd_question
-  Output: Almost finished for today - lets try the table function with the column lang. Subset the column lang of the tweets object and use it as argument inside of table()
+  Output: Almost finished for today - let`s try the table function with the column lang. Subset the column lang of the tweets object and use it as argument inside of table()
   CorrectAnswer: table(tweets$lang)
   AnswerTests: omnitest(correctExpr='table(tweets$lang)')
   Hint: Just type table(tweets$lang). 
@@ -318,7 +318,7 @@
   Output: I was using "taiwan OR 臺灣" as search query to collect the tweets. The majority of tweets are written in English.
   
 - Class: cmd_question
-  Output: Almost finished for today - lets try the table function with the column lang. Subset the column lang of the tweets object and use it as argument inside of table()
+  Output: Almost finished for today - let`s try the table function with the column lang. Subset the column lang of the tweets object and use it as argument inside of table()
   CorrectAnswer: table(tweets$lang)
   AnswerTests: omnitest(correctExpr='table(tweets$lang)')
   Hint: Just type table(tweets$lang). 
