@@ -339,6 +339,9 @@
   Output: With 5000 tweets I can cover 4 hours with my search terms.
 
 - Class: text
+  Output: Important points this week - difference between data frames and matrices, use the $ when subsetting tibbles if you want a vector, how to us is.na(), what kind of data we get back from the API.
+
+- Class: text
   Output: That's it! Next week you will download your own tweets - stay tuned!
    
 
