@@ -204,7 +204,7 @@
   Hint: Just use the function nrow and add tweets as argument.
 
 - Class: text
-  Output: As you can see it is a data frame and a tbl - which stands for tibble. Tibbles are more less the same as data frames but subsetting works differently.
+  Output: As you can see it is a data frame and a tbl - which stands for tibble. Tibbles are more or less the same as data frames but subsetting works differently.
 
 - Class: text
   Output: Some data-scientists prefer tibbles. However, most available code is still traditional - therefore we start with the `standard` way.
@@ -228,7 +228,7 @@
   Output: As you can see - we get back a tibble with just one column and not a vector. Box brackets with index numbers always return a tibble! The same happens if you use tweets[ ,"user_id"].
 
 - Class: cmd_question
-  Output: However, we can still subest a column as vector if we use the $ subset (mydf$name_of_column). Try to call the first colum user_id of the tibble tweets with the $.
+  Output: However, we can still subest a column as vector if we use the $ subset (mydf$name_of_column). Try to call the first column user_id of the tibble tweets with the $.
   CorrectAnswer: tweets$user_id
   AnswerTests: omnitest(correctExpr='tweets$user_id')
   Hint: Just type tweets$user_id. 
@@ -243,7 +243,7 @@
   Hint: Just type tweets$user_id. 
 
 - Class: cmd_question
-  Output: Scroll a little to the right - we focus now on the column reply_to_status_id. Subset this colum with the $ and save it in a new object called reply.
+  Output: Scroll a little to the right - we focus now on the column reply_to_status_id. Subset this column with the $ and save it in a new object called reply.
   CorrectAnswer: View(reply <- tweets$reply_to_status_id)
   AnswerTests: omnitest(correctExpr='reply <- tweets$reply_to_status_id')
   Hint: Just type reply <- tweets$reply_to_status_id. 
@@ -285,7 +285,7 @@
   Hint: Type reply[!is.na(reply)] to capture all non-missing values from reply.
 
 - Class: cmd_question
-  Output: Let`s subset now directly all replies. We now directly call the colum with tweets$reply_to_status_id. We use !is.na(tweets$reply_to_status_id) and put it as subset for the rows. Type tweets[!is.na(tweets$reply_to_status_id), ]
+  Output: Let`s subset now directly all replies. We now directly call the column with tweets$reply_to_status_id. We use !is.na(tweets$reply_to_status_id) and put it as subset for the rows. Type tweets[!is.na(tweets$reply_to_status_id), ]
   CorrectAnswer: tweets[!is.na(tweets$reply_to_status_id), ]
   AnswerTests: omnitest(correctExpr='tweets[!is.na(tweets$reply_to_status_id), ]')
   Hint: Type tweets[!is.na(tweets$reply_to_status_id), ].
