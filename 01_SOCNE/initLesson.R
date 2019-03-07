@@ -10,3 +10,8 @@
 }
 
 load(file.path(.get_course_path(), "week_02", "01_SOCNE", "tweets.rdata"))
+
+if(!require(tibble)){
+  install.packages("tibble")
+  library(tibble)
+}
