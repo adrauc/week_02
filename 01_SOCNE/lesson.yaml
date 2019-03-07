@@ -101,7 +101,7 @@
   Hint: The command ?matrix will do the trick.
 
 - Class: cmd_question
-  Output: Now, look at the documentation for the matrix function and see if you can figure out how to create a matrix containing the same numbers (1-20) and dimensions (4 rows, 5 columns) by calling the matrix() function. Store the result in a variable called my_matrix2.
+  Output: Now, look at the documentation for the matrix function and see if you can figure out how to create a matrix containing the same numbers (1-20) and dimensions (4 rows, 5 columns) by calling the matrix() function. Store the result in a variable called my_matrix2. Use 1:20 as an argument in matrix().
   CorrectAnswer: my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
   AnswerTests: calculates_same_value('matrix(1:20, nrow=4, ncol=5)'); expr_creates_var('my_matrix2')
   Hint: Call the matrix() function with three arguments -- 1:20, the number of rows, and the number of columns. Be sure to specify arguments by their proper names and store the result in my_matrix2 (not in my_matrix).
@@ -240,7 +240,7 @@
   Output: Let`s check a preview of the data above in the source code window. Type View(tweets)
   CorrectAnswer: View(tweets)
   AnswerTests: omnitest(correctExpr='View(tweets)')
-  Hint: Just type tweets$user_id. 
+  Hint: Just type View(tweets). 
 
 - Class: cmd_question
   Output: Scroll a little to the right - we focus now on the column reply_to_status_id. Subset this column with the $ and save it in a new object called reply.
@@ -250,7 +250,7 @@
 
 - Class: cmd_question
   Output: NA value means no value available. All NA are not replies. If there is value it is a reply to a specific tweets. Let`s check the first 20 values of reply with 1:20 and []
-  CorrectAnswer: View(reply[1:20])
+  CorrectAnswer: reply[1:20]
   AnswerTests: omnitest(correctExpr='reply[1:20]')
   Hint: Use the reply object together with the subset [1:20]. 
 
