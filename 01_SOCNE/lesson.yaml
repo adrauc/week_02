@@ -19,6 +19,9 @@
 - Class: text
   Output: The main difference, as you'll see, is that matrices can only contain a single class of data, while data frames can consist of many different classes of data.
   
+- Class: text
+  Output: We will not really work with matrices but they are still important in R and we will briefly cover them here in the first part.
+  
 - Class: cmd_question
   Output: Let's create a vector containing the numbers 1 through 20 using the `:` operator. Store the result in a variable called my_vector.
   CorrectAnswer: my_vector <- 1:20
@@ -47,7 +50,7 @@
   Output: Clearly, that`s not very helpful! Since my_vector is a vector, it doesn`t have a `dim` attribute (so it's just NULL), but we can find its length using the length() function. Try that now.
   CorrectAnswer: length(my_vector)
   AnswerTests: omnitest(correctExpr='length(my_vector)')
-  Hint: Type length(my_vector) to view the length of the vector you just created.
+  Hint: Type length(my_vector) to view the length of the vector you just created. 
 
 - Class: cmd_question
   Output: Ah! That's what we wanted. But, what happens if we give my_vector a `dim` attribute? Let's give it a try. Type dim(my_vector) <- c(4, 5).
@@ -65,13 +68,13 @@
   Hint: Just type dim(my_vector) to make sure the `dim` attribute has been set.
   
 - Class: cmd_question
-  Output: Another way to see this is by calling the attributes() function on my_vector. Try it now.
-  CorrectAnswer: attributes(my_vector)
-  AnswerTests: omnitest(correctExpr='attributes(my_vector)')
-  Hint: The command attributes(my_vector) will show you all of the attributes for the my_vector object.
+  Output: View the contents of my_vector.
+  CorrectAnswer: my_vector
+  AnswerTests: omnitest(correctExpr='my_vector')
+  Hint: Type my_vector to view its contents.
 
 - Class: text
-  Output: Just like in math class, when dealing with a 2-dimensional object (think rectangular table), the first number is the number of rows and the second is the number of columns. Therefore, we just gave my_vector 4 rows and 5 columns.
+  Output: Just like in math class, when dealing with a 2-dimensional object (think rectangular table), the first number of dim is the number of rows (4) and the second is the number of columns (5). Therefore, we just gave my_vector 4 rows and 5 columns.
 
 - Class: cmd_question
   Output: But, wait! That doesn`t sound like a vector any more. Well, it`s not. Now it's a matrix. View the contents of my_vector now to see what it looks like.
@@ -125,7 +128,7 @@
   Hint: Make sure to copy each name (with the right capitalization) and to store the result in a variable called screen_name. Also, don't get the order of the users mixed up! 
 
 - Class: cmd_question
-  Output: Now we`ll use the cbind() function to `combine columns`. Don't worry about storing the result in a new variable. Just call cbind() with two arguments -- the screen_name vector and my_matrix.
+  Output: Now we`ll use the cbind() function to `combine columns`. Don't worry about storing the result in a new object for now. Just call cbind() with two arguments -- the screen_name vector and my_matrix.
   CorrectAnswer: cbind(screen_name, my_matrix)
   AnswerTests: omnitest(correctExpr='cbind(screen_name, my_matrix)')
   Hint: Type cbind(screen_name, my_matrix) to add the names of our users to the matrix of numbers.
@@ -207,7 +210,7 @@
   Output: As you can see it is a data frame and a tbl - which stands for tibble. Tibbles are more or less the same as data frames but subsetting works differently.
 
 - Class: text
-  Output: Some data-scientists prefer tibbles. However, most available code is still traditional - therefore we start with the `standard` way.
+  Output: Some data-scientists prefer tibbles. However, most available code on the internet is still traditional - therefore we start with the `standard` way.
 
 - Class: cmd_question
   Output: An advantage of tibbles is the automatic summary function if you call the object. Just type tweets and call the object.
@@ -228,7 +231,7 @@
   Output: As you can see - we get back a tibble with just one column and not a vector. Box brackets with index numbers always return a tibble! The same happens if you use tweets[ ,"user_id"].
 
 - Class: cmd_question
-  Output: However, we can still subest a column as vector if we use the $ subset (mydf$name_of_column). Try to call the first column user_id of the tibble tweets with the $.
+  Output: However, we can still subset a column as vector if we use the $ subset (mydf$name_of_column). Try to call the first column user_id of the tibble tweets with the $.
   CorrectAnswer: tweets$user_id
   AnswerTests: omnitest(correctExpr='tweets$user_id')
   Hint: Just type tweets$user_id. 
@@ -249,7 +252,7 @@
   Hint: Just type reply <- tweets$reply_to_status_id. 
 
 - Class: cmd_question
-  Output: NA value means no value available. All NA are not replies. If there is value it is a reply to a specific tweets. Let`s check the first 20 values of reply with 1:20 and []
+  Output: NA value means no value available. All NA are not replies. If there is value it is a reply to a specific tweet. Let`s check the first 20 values of reply with 1:20 and []
   CorrectAnswer: reply[1:20]
   AnswerTests: omnitest(correctExpr='reply[1:20]')
   Hint: Use the reply object together with the subset [1:20]. 
@@ -259,6 +262,7 @@
   CorrectAnswer: is.na(reply)
   AnswerTests: omnitest(correctExpr='is.na(reply)')
   Hint: Just type is.na(reply). 
+  
 - Class: text
   Output: is.na() yields a vector of logical values the same length as reply, with TRUEs corresponding to NA values in replies and FALSEs corresponding to non-NA values in reply.
 
@@ -339,7 +343,7 @@
   Output: With 5000 tweets I can cover 4 hours with my search terms.
 
 - Class: text
-  Output: Important points this week - difference between data frames and matrices, use the $ when subsetting tibbles if you want a vector, how to us is.na(), what kind of data we get back from the API.
+  Output: Important points this week - difference between data frames and matrices, use the $ when subsetting tibbles if you want a vector, how to use is.na(), what kind of data we get back from the API.
 
 - Class: text
   Output: That's it! Next week you will download your own tweets - stay tuned!
