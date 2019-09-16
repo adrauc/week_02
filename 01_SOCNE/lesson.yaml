@@ -23,13 +23,13 @@
   Output: We will not really work with matrices but they are still important in R and we will briefly cover them here in the first part.
   
 - Class: cmd_question
-  Output: Let's create a vector containing the numbers 1 through 20 using the `:` operator. Store the result in a variable called my_vector.
+  Output: Let's create a vector containing the numbers 1 through 20 using the `:` operator. Store the result in a variable called my_vector with <-
   CorrectAnswer: my_vector <- 1:20
   AnswerTests: omnitest(correctExpr='my_vector <- 1:20')
-  Hint: Type 1:20 with no spaces. Make sure to use a regular colon and NOT a semi-colon.
+  Hint: Type 1:20 with no spaces. Make sure to use a regular colon and NOT a semi-colon. my_vector <- 1:20
 
 - Class: cmd_question
-  Output: View the contents of the vector you just created.
+  Output: View the contents of the vector you just created - type the name of the object
   CorrectAnswer: my_vector
   AnswerTests: omnitest(correctExpr='my_vector')
   Hint: Type my_vector to view its contents.
@@ -53,7 +53,7 @@
   Hint: Type length(my_vector) to view the length of the vector you just created. 
 
 - Class: cmd_question
-  Output: Ah! That's what we wanted. But, what happens if we give my_vector a `dim` attribute? Let's give it a try. Type dim(my_vector) <- c(4, 5).
+  Output: Ah! That's what we wanted. But, what happens if we give my_vector a `dim` attribute? Let's give it a try. Type dim(my_vector) <- c(4, 5)
   CorrectAnswer: dim(my_vector) <- c(4, 5)
   AnswerTests: omnitest(correctExpr='dim(my_vector) <- c(4, 5)')
   Hint: Type dim(my_vector) <- c(4, 5) to give my_vector a `dim` attribute.
@@ -74,13 +74,7 @@
   Hint: Type my_vector to view its contents.
 
 - Class: text
-  Output: Just like in math class, when dealing with a 2-dimensional object (think rectangular table), the first number of dim is the number of rows (4) and the second is the number of columns (5). Therefore, we just gave my_vector 4 rows and 5 columns.
-
-- Class: cmd_question
-  Output: But, wait! That doesn`t sound like a vector any more. Well, it`s not. Now it's a matrix. View the contents of my_vector now to see what it looks like.
-  CorrectAnswer: my_vector
-  AnswerTests: omnitest(correctExpr='my_vector')
-  Hint: Type my_vector to view its contents.
+  Output: But, wait! That doesn`t sound like a vector any more. Well, it`s not. Now it's a matrix. Just like in math class, when dealing with a 2-dimensional object (think rectangular table), the first number of dim is the number of rows (4) and the second is the number of columns (5). Therefore, we just gave my_vector 4 rows and 5 columns.
 
 - Class: cmd_question
   Output: Now, let`s confirm it's actually a matrix by using the class() function. Type class(my_vector) to see what I mean.
@@ -207,7 +201,7 @@
   Hint: Just use the function nrow and add tweets as argument.
 
 - Class: text
-  Output: As you can see it is a data frame and a tbl - which stands for tibble. Tibbles are more or less the same as data frames but subsetting works differently.
+  Output: As you can see it is a data frame and a tbl - which stands for table/tibble. Tibbles are more or less the same as data frames but subsetting works differently.
 
 - Class: text
   Output: Some data-scientists prefer tibbles. However, most available code on the internet is still traditional - therefore we start with the `standard` way.
@@ -247,7 +241,7 @@
 
 - Class: cmd_question
   Output: Scroll a little to the right - we focus now on the column reply_to_status_id. Subset this column with the $ and save it in a new object called reply.
-  CorrectAnswer: View(reply <- tweets$reply_to_status_id)
+  CorrectAnswer: reply <- tweets$reply_to_status_id
   AnswerTests: omnitest(correctExpr='reply <- tweets$reply_to_status_id')
   Hint: Just type reply <- tweets$reply_to_status_id. 
 
@@ -334,7 +328,7 @@
   Hint: Just type min(tweets$created_at). 
 
 - Class: cmd_question
-  Output: Now use both functions together and subtract the min value from the max value with min() and max().
+  Output: Now use both functions together and subtract the min value from the max value with min() and max() ... min() - max()
   CorrectAnswer: max(tweets$created_at) - min(tweets$created_at)
   AnswerTests: omnitest(correctExpr='max(tweets$created_at) - min(tweets$created_at)')
   Hint: Just type max(tweets$created_at) - min(tweets$created_at). 
