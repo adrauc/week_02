@@ -29,7 +29,7 @@
   Hint: Type 1:20 with no spaces. Make sure to use a regular colon and NOT a semi-colon. my_vector <- 1:20
 
 - Class: cmd_question
-  Output: View the contents of the vector you just created - type the name of the object
+  Output: View the contents of the vector you just created - just type the name of the object and hit enter
   CorrectAnswer: my_vector
   AnswerTests: omnitest(correctExpr='my_vector')
   Hint: Type my_vector to view its contents.
@@ -83,10 +83,10 @@
   Hint: Type class(my_vector) to view the class of my_vector.
 
 - Class: cmd_question
-  Output: Sure enough, my_vector is now a matrix. We should store it in a new variable that helps us remember what it is. Store the value of my_vector in a new variable called my_matrix.
+  Output: Sure enough, my_vector is now a matrix. We should store it in a new object that helps us remember what it is. Store the value of my_vector in a new object called my_matrix.
   CorrectAnswer: my_matrix <- my_vector
   AnswerTests: omnitest(correctExpr='my_matrix <- my_vector')
-  Hint: Since we can't just change the name of our my_vector variable, we'll assign its value to a new variable with my_matrix <- my_vector.
+  Hint: Since we can't just change the name of our my_vector object, we'll assign its value to a new object with my_matrix <- my_vector.
 
 - Class: text
   Output: The example that we've used so far was meant to illustrate the point that a matrix is simply an atomic vector with a dimension attribute. A more direct method of creating the same matrix uses the matrix() function.
@@ -116,7 +116,7 @@
   Output: We may want to label the rows, so that we know which numbers belong to each user in our analysis. One way to do this is to add a column to the matrix, which contains the names of all four users.
 
 - Class: cmd_question
-  Output: Let's start by creating a character vector containing the names of our users -- realDonaldTrump, BarackObama, EmmanuelMacron, and HassanRouhani. Remember that double quotes tell R that something is a character string. Store the result in a variable called screen_name.
+  Output: Let's start by creating a character vector containing the names of our users -- "realDonaldTrump", "BarackObama", "EmmanuelMacron", "HassanRouhani". Remember that double quotes tell R that something is a character string. Store the result in a variable called screen_name.
   CorrectAnswer: screen_name <- c("realDonaldTrump", "BarackObama", "EmmanuelMacron", "HassanRouhani")
   AnswerTests: omnitest(correctExpr='screen_name <- c("realDonaldTrump", "BarackObama", "EmmanuelMacron", "HassanRouhani")')
   Hint: Make sure to copy each name (with the right capitalization) and to store the result in a variable called screen_name. Also, don't get the order of the users mixed up! 
