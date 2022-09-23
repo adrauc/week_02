@@ -328,7 +328,7 @@
   Hint: Just type min(tweets$created_at). 
 
 - Class: cmd_question
-  Output: Now use both functions together and subtract the min value from the max value with min() and max() ... min() - max()
+  Output: Now use both functions together and subtract the min value from the max value with min() and max() ... max() - min()
   CorrectAnswer: max(tweets$created_at) - min(tweets$created_at)
   AnswerTests: omnitest(correctExpr='max(tweets$created_at) - min(tweets$created_at)')
   Hint: Just type max(tweets$created_at) - min(tweets$created_at). 
